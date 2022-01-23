@@ -1,75 +1,69 @@
-/* 
-Uncomment the properties for seeing their functions.
-
-By changing the number of order property we can change the order in which the groups appear.
-By changing the flex-grow property we can relatively arrage contents. we can use it instead of width; apply to the base class.
-flex-basis and flex-grow would help in creating layouts.
-*/
-
+/*Global*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.container1 {
-  border: 3px solid black;
+html {
+  font-size: 65%;
+  background: honeydew;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Start*/
+nav {
+  font-size: 1.5rem;
   display: flex;
-  flex-wrap: wrap;
-
-  /*
-  flex-direction: column;
-  flex-direction: column-reverse;
-  flex-direction: row-reverse;
-  flex-direction: row;
-  
- 
-  justify-content: end;
-  
-  justify-content: center;
-  justify-content: flex-end;
-  align-items: stretch;
-  justify-content: space-evenly;
-  height: 50vh;
+  justify-content: space-between;
   align-items: center;
-  */
+  padding: 1rem;
+  background: lightblue;
 }
 
-.box {
-  height: 10rem;
-  flex: 1 1 10rem;
-  /*
-  flex-basis: 10rem;
-  flex-grow: 1;
-  */
+ul {
+  list-style: none;
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+h1 {
+  font-size: 6rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: lightskyblue;
 }
 
-.box1 {
-  background: teal;
-  order: 1;
+/*Media queries*/
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+    color: chartreuse;
+  }
+  nav,
+  nav ul {
+    flex-direction: column;
+    font-size: 1.5rem;
+    align-items: center;
+  }
 }
 
-.box2 {
-  background: chartreuse;
-  order: 2;
-}
-
-.box3 {
-  background: khaki;
-  order: 3;
-}
-
-.box4 {
-  background: rgb(160, 77, 0);
-  order: 4;
-}
-
-.box5 {
-  background: rgb(201, 8, 185);
-  order: 5;
-}
-
-.box6 {
-  background: rgb(37, 48, 155);
-  order: 6;
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+    color: crimson;
+  }
+  nav,
+  nav li {
+    font-size: 1rem;
+  }
 }
