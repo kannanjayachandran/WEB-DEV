@@ -1,3 +1,3 @@
 # This project is about flexbox.
 
-<img src="img.png" width="600" height="500"/>
+<img src="img.png" width="800" height="500"/>
